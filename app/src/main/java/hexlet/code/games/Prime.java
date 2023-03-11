@@ -31,7 +31,8 @@ public class Prime {
                     count++;
                 } else if (answer.equalsIgnoreCase("no")) {
                     System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
-                    System.out.println("Let's try again " + userName + "!");
+                    System.out.println("Let's try again, " + userName + "!");
+                    break;
                 } else {
                     System.out.println("Incorrect input ;(");
                     break;
@@ -45,7 +46,8 @@ public class Prime {
 
                 } else if (answer.equalsIgnoreCase("yes")) {
                     System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
-                    System.out.println("Let's try again " + userName + "!");
+                    System.out.println("Let's try again, " + userName + "!");
+                    break;
                 } else {
                     System.out.println("Incorrect input ;(");
                     break;

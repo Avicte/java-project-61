@@ -26,32 +26,32 @@ public class Even {
             String answer = scanner1.nextLine();
 
             if (randomNumber % 2 == 0) {
-                switch (answer) {
-                    case "yes":
-                        System.out.println("Correct!");
-                        count++;
-                        break;
-                    case "no":
-                        System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
-                        System.out.println("Let's try again " + userName + "!");
-                        break;
-                    default:
-                        System.out.println("Incorrect input ;(");
-                        break;
+                String answerForCheck = "yes";
+                if (answerForCheck.equalsIgnoreCase(answer)) {
+                    System.out.println("Correct!");
+                    count++;
+                } else if (answer.equalsIgnoreCase("no")) {
+                    System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
+                    System.out.println("Let's try again, " + userName + "!");
+                    break;
+                } else {
+                    System.out.println("Incorrect input ;(");
+                    break;
                 }
+
             } else {
-                switch (answer) {
-                    case "no":
-                        System.out.println("Correct!");
-                        count++;
-                        break;
-                    case "yes":
-                        System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
-                        System.out.println("Let's try again " + userName + "!");
-                        break;
-                    default:
-                        System.out.println("Incorrect input ;(");
-                        break;
+                String answerForCheck2 = "no";
+                if (answerForCheck2.equalsIgnoreCase(answer)) {
+                    System.out.println("Correct!");
+                    count++;
+
+                } else if (answer.equalsIgnoreCase("yes")) {
+                    System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
+                    System.out.println("Let's try again, " + userName + "!");
+                    break;
+                } else {
+                    System.out.println("Incorrect input ;(");
+                    break;
                 }
             }
         }
