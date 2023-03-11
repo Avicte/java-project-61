@@ -8,16 +8,16 @@ import java.util.Random;
 
 
 public class Even {
-    static final int maxCount = 3;
-    static final int maxRandom = 100;
+    static final int MAX_COUNT = 3;
+    static final int MAX_RANDOM = 100;
     public static void randomEven() {
         String userName = Cli.greetings();
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         int count = 0;
-        while (count < maxCount) {
-            int randomNumber = new Random().nextInt(1, maxRandom);
+        while (count < MAX_COUNT) {
+            int randomNumber = new Random().nextInt(1, MAX_RANDOM);
 
             System.out.println("Question: " + randomNumber);
             System.out.print("Your answer: ");

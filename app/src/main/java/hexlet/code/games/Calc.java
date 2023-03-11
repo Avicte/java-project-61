@@ -9,8 +9,8 @@ import java.util.Random;
 
 
 public class Calc {
-    static final int maxCount = 3;
-    static final int maxRandom = 100;
+    static final int MAX_COUNT = 3;
+    static final int MAX_RANDOM = 100;
     public static void randomCalc() {
 
         String userName = Cli.greetings();
@@ -20,10 +20,10 @@ public class Calc {
         char[] operations = {'+', '-', '*'};
 
         int count = 0;
-        while (count < maxCount) {
+        while (count < MAX_COUNT) {
 
-            int randomNumber = new Random().nextInt(1, maxRandom);
-            int randomNumber2 = new Random().nextInt(1, maxRandom);
+            int randomNumber = new Random().nextInt(1, MAX_RANDOM);
+            int randomNumber2 = new Random().nextInt(1, MAX_RANDOM);
 
             int randomIndex = new Random().nextInt(operations.length);
             char operator = operations[randomIndex];

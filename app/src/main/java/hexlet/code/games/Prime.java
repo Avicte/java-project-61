@@ -7,16 +7,16 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Prime {
-    static final int maxCount = 3;
-    static final int maxCount = 100;
+    static final int MAX_COUNT = 3;
+    static final int MAX_RANDOM = 100;
     public static void primeGame() {
         String userName = Cli.greetings();
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         int count = 0;
-        while (count < maxCount) {
-            int randomNumber = new Random().nextInt(0, maxCount);
+        while (count < MAX_COUNT) {
+            int randomNumber = new Random().nextInt(0, MAX_RANDOM);
             boolean correctAnswer = Prime.isSimple(randomNumber);
 
             System.out.println("Question: " + randomNumber);
