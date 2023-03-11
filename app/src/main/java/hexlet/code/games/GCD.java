@@ -7,16 +7,17 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class GCD {
+    static final int maxCount = 3;
+    static final int maxRandom = 100;
     public static void division() {
         String userName = Cli.greetings();
 
         System.out.println("Find the greatest common divisor of given numbers.");
 
         int count = 0;
-        int maxCount = 3;
         while (count < maxCount) {
-            int randomNumber1 = new Random().nextInt(1, 100);
-            int randomNumber2 = new Random().nextInt(1, 100);
+            int randomNumber1 = new Random().nextInt(1, maxRandom);
+            int randomNumber2 = new Random().nextInt(1, maxRandom);
 
             int min = Math.min(randomNumber1, randomNumber2);
 
