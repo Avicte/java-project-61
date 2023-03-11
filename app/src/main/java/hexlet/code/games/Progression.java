@@ -8,19 +8,23 @@ import java.util.Random;
 import java.util.Arrays;
 
 public class Progression {
+    static final int maxCount = 3;
+    static final int maxRandom = 100;
+    static final int maxRandomeIncrease = 5;
+    static final int maxRandomeLength = 10;
+    
     public static void progression() {
         String userName = Cli.greetings();
 
         System.out.println("What number is missing in the progression?");
 
         int count = 0;
-        int maxCount = 3;
         while (count < maxCount) {
 
-            int randomLengthOfProgression = new Random().nextInt(5, 10);
+            int randomLengthOfProgression = new Random().nextInt(maxRandomeIncrease, maxRandomeLength);
             int[] randomProgression = new int[randomLengthOfProgression];
-            int initialValue = new Random().nextInt(1, 100);
-            int randomIncrease = new Random().nextInt(1, 5);
+            int initialValue = new Random().nextInt(1, maxRandom);
+            int randomIncrease = new Random().nextInt(1, maxRandomeIncrease);
             randomProgression[0] = initialValue;
 
             for (var i = 1; i < randomProgression.length; i++) {
