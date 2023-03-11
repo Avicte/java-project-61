@@ -9,6 +9,11 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class App {
+    static final int evenGame = 2;
+    static final int calcGame = 3;
+    static final int gcdGame = 4;
+    static final int progressionGame = 5;
+    static final int primeGame = 6;
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
@@ -19,11 +24,11 @@ public class App {
         switch (gameNumber) {
             case 0 -> { }
             case 1 -> Cli.greetings();
-            case 2 -> Even.randomEven();
-            case 3 -> Calc.randomCalc();
-            case 4 -> GCD.division();
-            case 5 -> Progression.progression();
-            case 6 -> Prime.primeGame();
+            case evenGame -> Even.randomEven();
+            case calcGame -> Calc.randomCalc();
+            case gcdGame -> GCD.division();
+            case progressionGame -> Progression.progression();
+            case primeGame -> Prime.primeGame();
             default -> System.out.println("Invalid game number.");
         }
     }
